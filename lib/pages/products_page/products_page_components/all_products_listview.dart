@@ -2,7 +2,7 @@ import 'package:dribble_2/models/product.dart';
 import 'package:dribble_2/models/product_list.dart';
 import 'package:flutter/material.dart';
 
-class AllproductsItemsWidget extends StatelessWidget {
+class AllProductsListview extends StatelessWidget {
   final ProductList allProducts = ProductList(
     productList: [
       Product(
@@ -72,9 +72,8 @@ class AllproductsItemsWidget extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image(
-                      image: AssetImage(
-                          allProducts.productList[index].productImages),
-                    ),
+                        image: AssetImage(
+                            allProducts.productList[index].productImages)),
                   ),
                   Container(
                     padding: EdgeInsets.all(3),
@@ -82,77 +81,39 @@ class AllproductsItemsWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          allProducts.productList[index].productName,
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.grey[500],
-                          ),
-                        ),
-                        Text(
-                          allProducts.productList[index].price,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        text(allProducts.productList[index].productName, 15,
+                            Colors.grey, FontWeight.normal),
+                        text(allProducts.productList[index].price, 14,
+                            Colors.black, FontWeight.bold),
                         Row(
                           children: [
-                            Text(
-                              allProducts.productList[index].sellerName,
-                              style: TextStyle(
-                                fontSize: 10,
-                              ),
-                            ),
+                            text(allProducts.productList[index].sellerName, 10,
+                                Colors.black, FontWeight.normal),
                             Row(
                               children: [
-                                Icon(
-                                  Icons.star,
-                                  size: 10,
-                                ),
-                                Text(
-                                  allProducts.productList[index].rating,
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                  ),
-                                ),
+                                Icon(Icons.star, size: 10),
+                                text(allProducts.productList[index].rating, 10,
+                                    Colors.black, FontWeight.normal),
                               ],
                             ),
                           ],
                         ),
-                        Text(
-                          allProducts.productList[index].category,
-                          style: TextStyle(
-                            fontSize: 10,
-                          ),
-                        ),
+                        text(allProducts.productList[index].category, 10,
+                            Colors.black, FontWeight.normal),
                         Row(
                           children: [
                             Row(
                               children: [
-                                Icon(
-                                  Icons.location_on,
-                                  size: 10,
-                                ),
-                                Text(
-                                  allProducts.productList[index].distance,
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                  ),
-                                ),
+                                Icon(Icons.location_on, size: 10),
+                                text(allProducts.productList[index].distance,
+                                    10, Colors.black, FontWeight.normal),
                               ],
                             ),
                             Row(
                               children: [
-                                Icon(
-                                  Icons.upload_outlined,
-                                  size: 10,
-                                ),
-                                Text(
-                                  allProducts.productList[index].timeTaken,
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                  ),
-                                ),
+                                Icon(Icons.upload_outlined, size: 10),
+                                text(allProducts.productList[index].timeTaken,
+                                    10, Colors.black, FontWeight.normal),
                               ],
                             ),
                           ],
@@ -165,6 +126,18 @@ class AllproductsItemsWidget extends StatelessWidget {
             ),
           );
         },
+      ),
+    );
+  }
+
+  Widget text(
+      String text, double fontsize, Color color, FontWeight fontweight) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: fontsize,
+        fontWeight: fontweight,
+        color: color,
       ),
     );
   }

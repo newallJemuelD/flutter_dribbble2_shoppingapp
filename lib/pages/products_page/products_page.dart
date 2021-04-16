@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'firstpage_components.dart';
+import 'products_page_components.dart';
 
-class FirstPage extends StatefulWidget {
+class ProductsPage extends StatefulWidget {
   @override
-  _FirstPageState createState() => _FirstPageState();
+  _ProductsPageState createState() => _ProductsPageState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _ProductsPageState extends State<ProductsPage> {
   String dropdownValue = 'One';
 
   @override
@@ -20,23 +20,21 @@ class _FirstPageState extends State<FirstPage> {
       "Tools"
     ];
 
-    //Urgent selling section
-
-    List<String> urgentSellingImages = [
+    List<String> bestSellersImages = [
       "images/cycle.jpg",
       "images/iphone.jpg",
       "images/shirt.jpg",
       "images/utensils.png"
     ];
 
-    List<String> urgentSellingItemname = [
+    List<String> bestSellersName = [
       "Rodeo",
       "Iphone 12 Pro",
       "Allen solly",
       "Preeti vessels"
     ];
 
-    List<String> urgentSellingItemprice = [
+    List<String> bestSellersPrice = [
       "\$50",
       "\$950",
       "\$30",
@@ -45,9 +43,10 @@ class _FirstPageState extends State<FirstPage> {
 
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: Flex(
+          direction: Axis.vertical,
           children: [
-            AppbarWidget(),
+            Appbar(),
             Expanded(
               child: Container(
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
@@ -55,21 +54,21 @@ class _FirstPageState extends State<FirstPage> {
                   scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   children: [
-                    CategoriesWidget(categories: _categories),
-                    UrgentsellingHeadingWidget(),
-                    UrgentsellingItemsWidget(
-                      urgentSellingImages: urgentSellingImages,
-                      urgentSellingItemname: urgentSellingItemname,
-                      urgentSellingItemprice: urgentSellingItemprice,
+                    ProductCategories(categories: _categories),
+                    BestSellers(),
+                    BestSellersListview(
+                      bestSellersImages: bestSellersImages,
+                      bestSellersName: bestSellersName,
+                      bestSellersPrice: bestSellersPrice,
                     ),
-                    AllproductsHeadingWidget(),
-                    AllproductsItemsWidget(),
-                    AdWidget(),
+                    AllProducts(),
+                    AllProductsListview(),
+                    Advertisement(),
                   ],
                 ),
               ),
             ),
-            BottomNavbarWidget(),
+            BottomNavbar(),
           ],
         ),
       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class UrgentsellingHeadingWidget extends StatelessWidget {
-  const UrgentsellingHeadingWidget({
+class BestSellers extends StatelessWidget {
+  const BestSellers({
     Key? key,
   }) : super(key: key);
 

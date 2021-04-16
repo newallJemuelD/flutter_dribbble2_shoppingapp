@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'pages/first_page/firstpage.dart';
+import 'pages/products_page/products_page.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: FirstPage(),
+    home: ProductsPage(),
   ));
 }

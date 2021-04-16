@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'secondpage_components.dart';
+import 'products_description_page_components.dart';
 
-class SecondPage extends StatelessWidget {
+class ProductsDescriptionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

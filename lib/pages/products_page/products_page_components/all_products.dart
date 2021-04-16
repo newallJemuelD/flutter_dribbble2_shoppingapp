@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AllproductsHeadingWidget extends StatelessWidget {
-  const AllproductsHeadingWidget({
+class AllProducts extends StatelessWidget {
+  const AllProducts({
     Key? key,
   }) : super(key: key);
 

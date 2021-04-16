@@ -1,8 +1,8 @@
-import 'package:dribble_2/pages/second_page/secondpage.dart';
+import 'package:dribble_2/pages/products_description_page/products_description_page.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavbarWidget extends StatelessWidget {
-  const BottomNavbarWidget({
+class BottomNavbar extends StatelessWidget {
+  const BottomNavbar({
     Key? key,
   }) : super(key: key);
 
@@ -40,7 +40,7 @@ class BottomNavbarWidget extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondPage()),
+                  MaterialPageRoute(builder: (context) => ProductsDescriptionPage()),
                 );
               }),
           Icon(

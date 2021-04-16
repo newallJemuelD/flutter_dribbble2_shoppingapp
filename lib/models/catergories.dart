@@ -1,4 +1,4 @@
-// Practise
+// Practise code for explaination 
 
 class Categories {
   String name;

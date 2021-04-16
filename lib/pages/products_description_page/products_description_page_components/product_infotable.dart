@@ -25,45 +25,25 @@ class ProductInfoTable extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text(
-                          "CONDITION",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                          ),
-                        ),
+                        text('CONDITION', Colors.grey),
                         Text("Used"),
                       ],
                     ),
                     Column(
                       children: [
-                        Text(
-                          "MODEL",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                          ),
-                        ),
+                        text('MODEL', Colors.grey),
                         Text("Roadster"),
                       ],
                     ),
                     Column(
                       children: [
-                        Text(
-                          "TRM",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                          ),
-                        ),
+                        text('TRM', Colors.grey),
                         Text("Backdraft"),
                       ],
                     ),
                     Column(
                       children: [
-                        Text(
-                          "MILEAGE",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                          ),
-                        ),
+                        text('MILEAGE', Colors.grey),
                         Text("100"),
                       ],
                     ),
@@ -74,45 +54,25 @@ class ProductInfoTable extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text(
-                          "MAKE",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                          ),
-                        ),
+                        text('MAKE', Colors.grey),
                         Text("Shelby"),
                       ],
                     ),
                     Column(
                       children: [
-                        Text(
-                          "TYPE",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                          ),
-                        ),
+                        text('TYPE', Colors.grey),
                         Text("Convertible"),
                       ],
                     ),
                     Column(
                       children: [
-                        Text(
-                          "YEAR",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                          ),
-                        ),
+                        text('YEAR', Colors.grey),
                         Text("1965"),
                       ],
                     ),
                     Column(
                       children: [
-                        Text(
-                          "COLOR",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                          ),
-                        ),
+                        text('COLOR', Colors.grey),
                         Text("Yellow"),
                       ],
                     ),
@@ -123,4 +83,14 @@ class ProductInfoTable extends StatelessWidget {
           )),
     );
   }
+
+  Widget text(String text, Color color) {
+    return Text(
+      text,
+      style: TextStyle(
+        color: color,
+      ),
+    );
+  }
+
 }

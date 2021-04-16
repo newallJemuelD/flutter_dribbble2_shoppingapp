@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class UrgentsellingItemsWidget extends StatelessWidget {
-  const UrgentsellingItemsWidget({
+class BestSellersListview extends StatelessWidget {
+  const BestSellersListview({
     Key? key,
-    required this.urgentSellingImages,
-    required this.urgentSellingItemname,
-    required this.urgentSellingItemprice,
+    required this.bestSellersImages,
+    required this.bestSellersName,
+    required this.bestSellersPrice,
   }) : super(key: key);
 
-  final List<String> urgentSellingImages;
-  final List<String> urgentSellingItemname;
-  final List<String> urgentSellingItemprice;
+  final List<String> bestSellersImages;
+  final List<String> bestSellersName;
+  final List<String> bestSellersPrice;
 
   @override
   Widget build(BuildContext context) {
@@ -46,9 +46,7 @@ class UrgentsellingItemsWidget extends StatelessWidget {
                           width: 10,
                         ),
                       ),
-                      child: Image(
-                        image: AssetImage(urgentSellingImages[index]),
-                      ),
+                      child: Image(image: AssetImage(bestSellersImages[index])),
                     ),
                     Padding(
                       padding: EdgeInsets.all(5),
@@ -56,11 +54,9 @@ class UrgentsellingItemsWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Text(bestSellersName[index]),
                           Text(
-                            urgentSellingItemname[index],
-                          ),
-                          Text(
-                            urgentSellingItemprice[index],
+                            bestSellersPrice[index],
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),

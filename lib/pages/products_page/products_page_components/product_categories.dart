@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CategoriesWidget extends StatelessWidget {
-  const CategoriesWidget({
+class ProductCategories extends StatelessWidget {
+  const ProductCategories({
     Key? key,
     required List<String> categories,
   })   : _categories = categories,
